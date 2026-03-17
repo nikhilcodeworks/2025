@@ -1,0 +1,499 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+/*    background-color: #0d95d6;  */
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+} 
+
+.navbar{
+    height:10vh;
+    width: 100%;
+    display: flex;
+    margin:0;
+    justify-content: start;
+/*     background-color:#0d95d6; */
+    border-bottom:1px solid #6733e2;
+}
+
+.logo{
+  display: flex;  
+  justify-content: start;
+  align-items: center;
+}
+
+
+
+.navitems{
+    display: flex;
+    width:100%;
+    /* margin-left:20em; */
+    justify-content: end;
+    align-items: center;  
+}
+
+li{
+    list-style: none;
+    margin:1%;
+    border: 1px solid black;
+    padding:10px;
+    border-radius:10px;
+    position: relative;
+    overflow: hidden;
+   
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    z-index: 1;
+    position: relative;
+    
+   
+}
+a:hover{
+    text-decoration: none;
+    color: white; 
+}
+
+
+li::after{
+    content: '';
+    background-color: blue;
+    height:100%;
+    width: 100%;
+    bottom:-100%;
+    left: 0;
+    position: absolute;
+    transition: all ease 0.5s;
+}
+
+li:hover:after{
+    bottom:0;
+    left: 0; 
+}
+
+
+
+
+.animation{
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns:1fr  1fr ;
+    height: 450px;
+    /* background-color: black; */
+    width:100vw;
+    position: relative;  
+}
+
+.animation_name{
+    /* background-color: blue; */
+    width: 50vw;
+    height: 450px; 
+    margin-left:10px; 
+}
+
+
+h2{
+    display: inline-flex;
+    position: relative;
+    font-size: 3em;
+    color: whitesmoke;
+    -webkit-text-stroke: 1px black;
+}
+
+h2::before{
+content: attr(text);
+position: absolute;
+top: 0;
+Left: 0;
+width: 0;
+height: 100%;
+color:blueviolet ;
+overflow: hidden;
+-webkit-text-stroke: 0px black;
+animation: name linear 1s infinite;
+}
+
+@keyframes name{
+from{
+width: 0;     
+}
+to{
+    width: 100%;
+}
+
+}
+
+
+h3{
+display: inline;
+font-size: 1em;
+
+}
+
+
+
+.boy-animation{
+    /* background-color: red; */
+    width: 50vw;
+    height: 450px;
+    /* background-color: whitesmoke; */
+    /* background-image: url("./assets/image/clearoff\ \(2\).jpg"); */
+    /* background-size:cover; */
+    display:flex;
+    justify-content: center;
+   
+}
+
+.boy-animation div img{
+    height:40vh;
+    width: 50vw;
+    margin-left:7vh;
+    margin-top: 8em;
+    animation-name: boy-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+
+@keyframes boy-animation {
+    from{
+       margin-top:0;
+    }
+    to{
+        margin-top:15;
+
+    }
+}
+
+.skills{
+text-align: center;
+
+
+}
+
+.skills-container{
+    display: grid;
+    grid-template-rows:1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100vw;
+    /* background-color: red; */
+}
+
+.griditems{
+    
+     margin-left:35%;
+     margin-bottom:10px; 
+     justify-content: space-between;
+}
+
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    border:1px solid black;
+    height:10em;
+    width:10em;
+    border-radius:20px;
+ 
+}
+
+.card:hover{
+    color: gold;
+    background-color: white   
+}
+
+img{
+    height: 70px;
+    width: 70px;
+}
+
+.projects{
+text-align: center;
+
+}
+.project-container{
+    height: 360px;
+    width:100%;
+    /* border:2px solid black; */
+    display:flex; 
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    animation-name: slider;
+    animation-duration:5s;
+    animation-iteration-count:unset;   
+}
+
+@keyframes slider{
+   from{
+    margin-left:-100%;
+
+   }
+   to{
+    margin-left: 200%s;
+   }
+
+
+}
+
+.p1{
+    height:20em;
+    width: 30em;
+    border: 1px black solid;
+    border-radius:20px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.head{
+    height:45px;
+    margin: 0;
+    width:100%
+}
+
+.projectimg{
+    height:220px;
+    width:100%;
+}
+
+span a{
+    border: 1px solid black;
+    color: black;
+    padding: 5px;
+  
+    border-radius:5px;
+  
+}
+
+span a:hover{
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}
+
+.foot{
+    margin-top:15px;
+    height: 30px;
+}
+
+.contactme{
+    height: 150px;
+    width: 100%;
+    /* background-color: yellow; */
+
+    text-align: center;   
+}
+
+.connect{
+    height: 200px;
+    width:100%;
+
+}
+
+svg:hover{
+    fill: #6733e2;
+}
+
+.hire-me{
+    text-align: center;   
+}
+
+input{
+border: 1px black solid;
+border-radius: 5px;
+}
+input:hover{
+border-radius:1px yellow solid;
+}
+
+button{
+    background-color: yellow;
+    color: #6733e2;
+    height: 50px;
+    width:150px;
+    margin-top:40px ;
+    font-weight: bolder;
+    border-radius:10px;
+}
+
+button:hover{
+    background-color: #6733e2;
+    color: white;
+    border: 2px yellow solid;
+    transition:background-color 0.7s ;
+}
+
+
+
+.footer{
+    text-align: center;
+    height: 100px;
+    width: auto;
+    /* background-color:whitesmoke ; */
+}
+
+
+
+
+/*MEDIA QUERY*/
+@media (max-width:705px){
+
+    .navbar{
+        justify-content: center;
+    }
+
+    .navitems{
+        display: none;
+    }
+
+
+   h2{
+        font-size: 1.5em;
+        -webkit-text-stroke: 0.5px  #6733e2;
+    }
+    h2::before{
+        -webkit-text-stroke: 0.1px black;
+    }
+
+    h3{
+       
+        font-size: 0.8em;
+        
+        }
+
+        .animation{
+            display:flex;
+            flex-direction: column;
+        
+            height: 80vh;
+            /* background-color: black; */
+            width:100vw;
+        }
+        
+        .animation_name{
+            /* background-color: blue; */
+            width: 100vw;
+            height: 30vh;  
+        }
+        .boy-animation{
+            height: 50vh;
+            width: 100%;
+            
+        }
+        #boy{
+            height: 30vh;
+            width:70vw;
+        }
+
+    .griditems{
+        margin-left:20%;
+        margin-bottom:10px; 
+        justify-content: space-between;
+   }
+
+    .skills-container{
+        display: grid;
+        grid-template-rows:0.5fr 0.5fr;
+        grid-template-columns: 0.5fr 0.5fr;
+        width: 100vw;
+        gap:0;
+        /* background-color: red; */
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: whitesmoke;
+        border:1px solid black;
+        height:7em;
+        width:7em;
+        border-radius:20px; 
+    }
+    
+  
+    
+    img{
+        height: 50px;
+        width: 50px;
+    }
+
+    .projects{
+        text-align: center;
+    }
+       
+        .project-container{
+            height: 90%;
+            width:100%;
+            /* border:2px solid black; */
+            display: flex; 
+            flex-direction: column;
+            font-size: small;
+            justify-content:space-evenly;
+            align-items: center;
+            animation-name: slider;
+            animation-duration:5s;
+            animation-iteration-count:unset;   
+        }
+
+        .p1{
+           
+            height:90%;
+            width: 80%;
+            border: 1px black solid;
+            border-radius:20px;
+            text-align: center;
+            font-size: smaller;
+            margin:1em;
+        }
+        
+        .head{
+            height:3em;
+            margin: 0;
+            width:100%
+            
+        }
+        
+        .projectimg{
+            height:100%;
+            width:100%;
+        }
+        
+        span a{
+            border: 1px solid black;
+            color: black;
+            height: 1.5em;
+            display:inline-block;
+            width: 10em;
+            margin-bottom: 10px;
+            font-size: 10px;
+            padding:5px;
+            border-radius:5px; 
+        }     
+        
+        .foot{
+            margin-top:0.1em;
+
+        }
+
+       
+
+
+    
+    
+
+
+    
+
+}

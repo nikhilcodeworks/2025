@@ -1,0 +1,28 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Cube</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Canvas where Three.js will render the scene -->
+    <canvas id="canvas"></canvas>
+    
+    <!-- Importmap to load Three.js from CDN -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.172.0/build/three.module.js"
+            }
+        }
+    </script>
+    
+    <!-- Link to external JavaScript file -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="relative overflow-hidden">
+
+ <div class="main">
+      <div class="p-2 grid grid-cols-2 ">
+       <div class="flex flex-col justify-start items-center draggable-icon">
+         <img class="icon " src="./assets/icons/bin.png" alt="">
+         <h4 class="text-white">bin</h4>
+       </div>
+       <div class="flex flex-col justify-start items-center draggable-icon">
+         <img class="icon " src="./assets/icons/ms-edge.png" alt="">
+         <h4 class="text-white">ms-edge</h4>
+       </div>
+       <div class="flex flex-col justify-start items-center draggable-icon">
+         <img class="icon " src="./assets/icons/photos.png" alt="">
+         <h4 class="text-white">photos</h4>
+       </div>
+       <div class="flex flex-col justify-start items-center draggable-icon">
+         <img class="icon " src="./assets/icons/file-ex.png" alt="">
+         <h4 class="text-white">files</h4>
+       </div>
+       <div class="flex flex-col justify-start items-center draggable-icon">
+         <img class="icon " src="./assets/icons/linkdin.png" alt="">
+         <h4 class="text-white">linkedin</h4>
+       </div>
+      
+    </div>
+
+   
+
+
+
+    <div class="big-pannel hidden  fixed h-[73%] w-[40%] top-[53%] rounded-sm left-1/2 -translate-y-1/2 -translate-x-1/2 bg-zinc-200 ">
+      <div class="h-[90%]  grid place-items-center grid-cols-3 gap-2">
+         <div class="flex flex-col justify-start items-center">
+         <img class="icon " src="./assets/icons/bin.png" alt="">
+         <h4 class="text-white">bin</h4>
+       </div>
+       <div class="flex flex-col justify-start items-center ">
+         <img class="icon " src="./assets/icons/ms-edge.png" alt="">
+         <h4 class="text-white">ms-edge</h4>
+       </div>
+       <div class="flex flex-col justify-start items-center ">
+         <img class="icon " src="./assets/icons/photos.png" alt="">
+         <h4 class="text-white">photos</h4>
+       </div>
+       <div class="flex flex-col justify-start items-center ">
+         <img class="icon " src="./assets/icons/file-ex.png" alt="">
+         <h4 class="text-white">files</h4>
+       </div>
+       <div class="flex flex-col justify-start items-center ">
+         <img class="icon " src="./assets/icons/linkdin.png" alt="">
+         <h4 class="text-white">linkedin</h4>
+       </div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+     
+
+      </div>
+      <div class="flex justify-between items-center p-2">
+        
+        <div class="flex items-center gap-2">
+          <img class="h-7" src="./assets/icons/user.png" alt="">
+          <h1>Nikhil</h1>
+        </div>
+        <img class="h-7" src="./assets/icons/power.png" alt="">
+      </div>
+
+    </div>
+    <div class="small-pannel hidden fixed h-[50%] w-[25%] top-[66%] left-[73%] -translate-y-1/2 -translate-x- bg-zinc-300 ">
+      <div class="h-[60%] p-2 grid grid-cols-3 justify-center place-items-center">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+
+      </div>
+      <div class="p-4 gap-6 flex flex-col justify-center">
+         <input outline-none type="range" min="30" max="100" value="40" id="slider1">
+          <input outline-none type="range" min="30" max="100" value="40" id="slider1">
+
+      </div>
+
+
+      <div class="p-6 flex justify-between items-center ">
+        <img class="h-5" src="./assets/icons/battery.png" alt="">
+        <img class="h-5" src="./assets/icons/settings.png" alt="">
+
+
+      </div>
+
+
+
+    </div>
+
+    <div id="menubar" class="bg-zinc-300 h-[8vh] w-screen bottom-0 absolute flex justify-center items-center">
+        <img class="icon main-menu   hover:bg-zinc-100 hover:rounded-xl" src="./assets/icons/windows-menu.png" alt="">
+        <div id="right-panel" class="absolute right-5 flex gap-4 justify-center items-center">
+            <div id="rightd1" class="small-menu px-2 py-2 hover:bg-zinc-100 hover:rounded-sm flex gap-2 justify-end">
+                <img class="icon3" src="./assets/icons/battery.png" alt="">
+                <img class="icon3" src="./assets/icons/sound.png" alt="">
+                <img class="icon3" src="./assets/icons/wifi.png" alt="">
+            </div>
+            <div id="rightd2 " class="text-right px-2  hover:bg-zinc-100 hover:rounded-sm">
+                <h2 class="time"><pre><span>9:10</span></pre></h2>
+                <h2>28-06-2025</h2>
+            </div>
+
+        </div>
+    </div>
+ </div>
+    <script src="./script.js"></script>
+</body>
+</html>

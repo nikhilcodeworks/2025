@@ -1,0 +1,43 @@
+.text-purple {
+    color: #6f42c1 !important;
+}
+.testimonial-carousel {
+    text-align: center;
+  }
+  .testimonial-carousel .carousel-item {
+    transition: transform 0.6s ease, opacity 0.6s ease;
+  }
+  .carousel-item img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  .carousel-item p {
+    font-size: 16px;
+    color: #555;
+  }
+  .carousel-item .author {
+    font-weight: bold;
+    color: green;
+  }
+  .carousel-item .role {
+    font-style: italic;
+    color: #777;
+  }
+
+.footer {
+    background-color: #0d6efd;
+    color: white;
+    padding: 1rem 0;
+}
+.contact-image {
+    max-width: 100%;
+    height: auto;
+}
+.form-section input, .form-section textarea {
+    margin-bottom: 1rem;
+}
+.carousel-inner img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}

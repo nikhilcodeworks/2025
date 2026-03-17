@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Note</title>
+    <link rel="stylesheet" href="/edit.css">
+</head>
+<body>
+    <header>
+        <h1>Edit Note</h1>
+        <nav>
+            <a href="/" class="home-button">Home</a>
+            <a href="/create" class="create-button">Create New Note</a>
+        </nav>
+    </header>
+    <main>
+        <form action="/created" method="post">
+            <input type="hidden" name="oldTitle" value="<%= filename %>">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" value="<%= filename %>" required>
+
+            <label for="content">Content</label>
+            <textarea name="content" id="content" required><%= data %></textarea>
+
+            <input type="submit" value="Update Note">
+        </form>
+    </main>
+</body>
+</html>

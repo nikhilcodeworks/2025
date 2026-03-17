@@ -1,0 +1,56 @@
+/* Light mode (default) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #03033D;
+  color: #ffffff;
+}
+
+nav {
+  background-color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+body.dark-mode nav {
+  background-color: #121212;
+}
+
+/* Notification button */
+.notification-button {
+  background-color: #03033D;
+  color: white;
+  padding: 11px 10px;
+}
+
+/* Dark mode button */
+.theme-toggle-button {
+  background-color: #03033D;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+body.dark-mode .theme-toggle-button {
+  background-color: #ffffff;
+  color: #03033D;
+}
+
+/* Current page title */
+/* No need - changed to tailwind css */
+/*.currentPageTitle:hover {*/
+/*  background-color: #03033D;*/
+/*  color: white;*/
+/*}*/
+
+/* Notification dropdown */
+body.dark-mode .NotificationHeader {
+  background-color: #121212;
+  color: #ffffff;
+}

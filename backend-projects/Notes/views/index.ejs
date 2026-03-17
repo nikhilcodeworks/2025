@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <header>
+        <h1>Notes App</h1>
+        <nav>
+            <a href="/" class="home-button">Home</a>
+            <a href="/create" class="create-button">Create New Note</a>
+        </nav>
+    </header>
+    <main>
+        <% if (files.length > 0) { %>
+            <ul class="notes-list">
+                <% files.forEach(data => { %>
+                    <li class="note-item">
+                        <a href="/read/<%= data %>" class="note-link"><%= data %></a>
+                        <div class="note-actions">
+                            <a href="/edit/<%= data %>" class="edit-button">Edit</a>
+                            <a href="/deleted/<%= data %>" class="delete-button">Delete</a>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>No notes available. <a href="/create" class="create-link">Create a new note</a></p>
+        <% } %>
+    </main>
+</body>
+</html>

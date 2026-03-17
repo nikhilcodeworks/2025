@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Auth UI</title>
+    <style>
+    :root {
+    --primary: #6366f1;
+    --secondary: #8b5cf6;
+    --accent: #ec4899;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #2d3436;
+    overflow-x: hidden;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+    animation: containerEntrance 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes containerEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.left-section {
+    position: relative;
+    flex: 1;
+    padding: 4rem;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientFlow 15s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.quote-container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    animation: float 6s ease-in-out infinite;
+}
+
+.quote-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.quote-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.buttons button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.buttons button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.buttons button.active {
+    background: white;
+    color: #2d3436;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.right-section {
+    flex: 1;
+    padding: 4rem;
+    background: white;
+}
+
+.form-container {
+    display: none;
+    animation: formEntrance 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes formEntrance {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.form-container.active {
+    display: block;
+}
+
+.form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #2d3436;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #636e72;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    background: #f8f9fa;
+    border: 2px solid #dfe6e9;
+    border-radius: 10px;
+    color: #2d3436;
+    transition: all 0.3s ease;
+    padding-right: 45px;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.login-linktag{
+    text-decoration: none;
+    color: #fff;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 1rem;
+    top: 65%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #636e72;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: var(--primary);
+}
+
+.sign-up-button, .login-button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sign-up-button:hover, .login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    animation: rippleEffect 600ms linear;
+}
+
+@keyframes rippleEffect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 1rem;
+    }
+    
+    .left-section, .right-section {
+        padding: 2rem;
+    }
+    
+    .buttons {
+        flex-direction: column;
+    }
+    
+    .quote-container h2 {
+        font-size: 2rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="quote-container">
+                <h2>Quote of the Day</h2>
+                <p>"Design is not just what it looks like and feels like. Design is how it works."</p>
+            </div>
+            <div class="buttons">
+                <button class="join-now active">Sign Up</button>
+                <button class="log-in">Login</button>
+            </div>
+        </div>
+        
+        <div class="right-section">
+            <!-- Signup Form -->
+            <div class="form-container signup-form active">
+                <h2>Create Account</h2>
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="example@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="••••••••">
+                        <button type="button" class="toggle-password">👁</button>
+                    </div>
+                    <button type="submit" class="sign-up-button">Sign Up</button>
+                </form>
+            </div>
+
+            <!-- Login Form -->
+            <div class="form-container login-form">
+                <h2>Welcome Back!</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="example@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="••••••••">
+                        <button type="button" class="toggle-password">👁</button>
+                    </div>
+                    <button type="submit" class="login-button"><a class="login-linktag" href="./main.html">Login</a></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Form Toggle Logic
+        const joinNowBtn = document.querySelector('.join-now');
+        const loginBtn = document.querySelector('.log-in');
+        const signupForm = document.querySelector('.signup-form');
+        const loginForm = document.querySelector('.login-form');
+
+        joinNowBtn.addEventListener('click', () => {
+            signupForm.classList.add('active');
+            loginForm.classList.remove('active');
+            joinNowBtn.classList.add('active');
+            loginBtn.classList.remove('active');
+        });
+
+        loginBtn.addEventListener('click', () => {
+            loginForm.classList.add('active');
+            signupForm.classList.remove('active');
+            loginBtn.classList.add('active');
+            joinNowBtn.classList.remove('active');
+        });
+
+        // Password Toggle
+        document.querySelectorAll('.toggle-password').forEach(button => {
+            button.addEventListener('click', function() {
+                const input = this.previousElementSibling;
+                input.type = input.type === 'password' ? 'text' : 'password';
+                this.textContent = input.type === 'password' ? '👁' : '👁️';
+            });
+        });
+
+        // Ripple Effect
+        function createRipple(event) {
+            const button = event.currentTarget;
+            const circle = document.createElement("div");
+            const diameter = Math.max(button.clientWidth, button.clientHeight);
+            const radius = diameter / 2;
+
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+            circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+            circle.classList.add("ripple");
+
+            const ripple = button.getElementsByClassName("ripple")[0];
+            if (ripple) ripple.remove();
+
+            button.appendChild(circle);
+        }
+
+        // Add Ripple to All Buttons
+        document.querySelectorAll('button').forEach(button => {
+            if(!button.classList.contains('toggle-password')) {
+                button.addEventListener('click', createRipple);
+            }
+        });
+
+        // Form Submission
+        document.getElementById('signupForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Add your signup logic here
+            alert('Signup Successful!');
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Add your login logic here
+            alert('Login Successful!');
+        });
+    </script>
+</body>
+</html>

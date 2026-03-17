@@ -1,0 +1,76 @@
+.job-description-container {
+    width: 100%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .company-logo {
+    width: 100px;
+  }
+  
+  .company-info p {
+    margin: 0;
+    font-size: 14px;
+    text-align: right;
+  }
+  
+  .job-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .job-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .job-table th,
+  .job-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .job-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .heading {
+    font-size: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 1%;
+  }
+  
+  .table-ul {
+    padding-left: 20px;
+  }
+  .table-li{
+    line-height: 1cm;
+  }
+  
+  .key-responsibilities ul {
+    list-style-type: square;
+  }
+  
+  .qualifications ul,
+  .benefits ul {
+    list-style-type: disc;
+  }
+  

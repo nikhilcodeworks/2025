@@ -1,0 +1,105 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="header ">
+        <h1 class="m-2 text-center font-bold outline">GPT-Clone</h1>
+    </div>
+    <div class="body overflow-y-auto h-[85vh] w-[100vw] ">
+        <div class="query">
+
+        </div>
+        <div class="query  py-4">
+            <h2 class="query inline-block m-2 px-2 py-2 bg-red-100 ">
+                <%=  Request ? Request :"Hello! How can I assist you today? Let's have a friendly and helpful conversation." %>
+            </h2>
+        </div>
+        <div class="">
+            <h3 class="response overflow-y-auto  m-4">
+                <%=  Response ? Response :"..." %> 
+            </h3>
+
+        </div>
+    </div>  
+    <div class="m-3 outline footer">
+       <form action="/chat" method="post">
+        <input class="m-2 w-[90%] focus:outline-none" id="input-box" type="text" name="userRequest" placeholder="Enter your text" > 
+       <input type="submit" value=">"  class="p-2 border-red-500 font-bold bg-black text-white w-[7.2%]" > 
+       </form>
+       
+    </div>
+    
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen font-sans">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-teal-500 to-blue-500 text-white py-4 shadow-lg">
+        <div class="container mx-auto flex justify-center">
+            <h1 class="text-4xl font-bold">GPT-CLONE</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow p-6 max-w-4xl mx-auto">
+        <!-- Chat Section -->
+        <section class="space-y-4">
+            <div class="flex flex-col space-y-4">
+                <!-- User Message -->
+                <div class="flex justify-start">
+                    <div class="bg-blue-600 text-white p-4 rounded-xl shadow-lg max-w-md">
+                        <h2 class="text-lg font-semibold">
+                            You: <%= Request ? Request : "" %>
+                        </h2>
+                    </div>
+                </div>
+                <!-- AI Response -->
+                <div class="flex justify-center">
+                    <div class="bg-white text-gray-800 p-4 rounded-xl shadow-lg max-w-md w-full border border-gray-300">
+                        <h3 class="text-lg  break-words">
+                            AI: <%= Response ? Response : "Hello! How can I assist you today? Let's have a friendly and helpful conversation." %>
+                        </h3>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white p-4">
+        <div class="container mx-auto flex justify-center">
+            <form action="/chat" method="post" class="w-full max-w-xl flex bg-gray-100 rounded-xl shadow-lg overflow-hidden">
+                <input 
+                    class="flex-grow text-gray-800 p-3 border-none outline-none focus:ring-2 focus:ring-teal-500"
+                    id="input-box"
+                    type="text"
+                    name="userRequest"
+                    placeholder="Type your message..."
+                />
+                <button 
+                    type="submit" 
+                    class="p-3 bg-teal-500 text-white font-semibold border-none cursor-pointer hover:bg-teal-600 transition-colors duration-300"
+                >
+                    Send
+                </button>
+            </form>
+        </div>
+    </footer>
+
+</body>
+</html>

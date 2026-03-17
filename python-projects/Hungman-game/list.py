@@ -1,0 +1,21 @@
+list = [
+    "apple", "banana", "orange", "grape", "strawberry", 
+    "watermelon", "pineapple", "kiwi", "peach", "blueberry",
+    "mango", "pear", "cherry", "plum", "apricot", "fig", "lemon",
+    "lime", "coconut", "papaya",
+    "avocado", "raspberry", "blackberry", "cranberry", "gooseberry", "melon", "nectarine",
+    "pomegranate", "tangerine", "cantaloupe",
+    "dragonfruit", "guava", "passionfruit", "lychee", "starfruit", "persimmon", "date",
+    "kiwifruit", "boysenberry", "mulberry",
+    "rutabaga", "cucumber", "zucchini", "eggplant",  "tomato", "carrot",
+    "celery", "broccoli", "cauliflower",
+    "potato", "spinach", "kale", "lettuce", "cabbage", "radish",
+    "turnip", "beet", "onion",
+    "garlic", "ginger", "leek", "shallot", "scallion", "asparagus", "artichoke", 
+    "squash",
+    "pumpkin", "pea",
+    "bean", "corn", "lentil", "chickpea", "soybean", "edamame",
+    "wheat", "rice",
+    "barley", "oat", "cornmeal", "quinoa", "bulgur", "millet", "amaranth", "buckwheat",
+    "couscous", "farro"
+]

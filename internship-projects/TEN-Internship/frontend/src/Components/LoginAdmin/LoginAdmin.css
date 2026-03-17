@@ -1,0 +1,14 @@
+.logoAdmin {
+    width: 60px;
+    height: 60px;
+    margin-left: 42%;
+}
+.totaldivcolor{
+    background-color: #03033D;
+}
+
+@media (max-width: 480px) {
+.logoAdmin {
+    margin-left: 33.3%;
+}
+}

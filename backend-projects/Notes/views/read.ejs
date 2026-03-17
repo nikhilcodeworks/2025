@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= filename %></title>
+    <link rel="stylesheet" href="/read.css">
+</head>
+<body>
+    <header>
+        <h1>Notes App</h1>
+        <nav>
+            <a href="/" class="home-button">Home</a>
+            <a href="/create" class="create-button">Create New Note</a>
+        </nav>
+    </header>
+    <main>
+        <div class="note-container">
+            <h2 class="note-title"><%= filename %></h2>
+            <div class="note-content">
+                <pre><%= data %></pre>
+            </div>
+            <a href="/edit/<%= filename %>" class="edit-button">Edit Note</a>
+            <a href="/deleted/<%= filename %>" class="delete-button">Delete Note</a>
+        </div>
+    </main>
+</body>
+</html>

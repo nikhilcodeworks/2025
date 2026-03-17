@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil - Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <section class="navbar-section w-full p-4 md:p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0">
+        <h1 class="text-xl md:text-2xl font-semibold">Portfolio</h1>
+        <div class="links">
+            <ul class="list-none flex flex-wrap gap-4 md:gap-6">
+                <li class="font-medium text-sm md:text-base">
+                    <a href="/" class="hover:opacity-70 transition-opacity">HOME</a>
+                </li>
+                <li class="font-medium text-sm md:text-base">
+                    <a href="" class="hover:opacity-70 transition-opacity">CONTACT</a>
+                </li>
+                <li class="font-medium text-sm md:text-base">
+                    <a href="" class="hover:opacity-70 transition-opacity">WORK</a>
+                </li>
+                <li class="font-medium text-sm md:text-base">
+                    <a href="" class="hover:opacity-70 transition-opacity">ABOUT</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Main Header Section -->
+    <section class="main leading-none w-full flex flex-col md:flex-row justify-between items-start md:items-end p-4 md:p-6 gap-6 md:gap-0">
+        <div class="left-section">
+            <h3 class="m-0 p-0 leading-none text-base md:text-lg">Hello I'm</h3>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium -ml-1 leading-tight tracking-tighter m-0 p-0">Nikhil.</h1>
+        </div>
+        <div class="right-section tracking-wide flex flex-col sm:flex-row justify-end items-start sm:items-center gap-2 sm:gap-4 w-full md:w-auto">
+            <h3 class="font-semibold text-sm md:text-base order-2 sm:order-1" id="clock">[10:10 AM]</h3>
+            <div class="bg-black w-16 md:w-20 h-0.5 order-3 sm:order-2"></div>
+            <div class="font-semibold text-sm md:text-base order-1 sm:order-3">Creative frontend developer</div>
+        </div>
+    </section>
+
+    <!-- Hero Image -->
+    <div class="bg-zinc-300 h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] rounded-lg m-4 md:m-6">
+        
+             <img class="rounded-lg object-cover w-full h-full" src="./portfolio.png" alt="" srcset="">
+    </div>
+
+    <!-- Skills Section -->
+    <div class=" p-4  md:p-6 mb-4 flex flex-col w-full min-h-[25vh] md:min-h-[30vh] text-center relative">
+        <!-- Floating Icons - Hidden on mobile for cleaner look -->
+        <img class="hidden md:block rotate-12 absolute w-8 md:w-10 right-[10vw] lg:right-[25vw] top-2" src="./i2.png" alt="">
+        <img class="hidden md:block rotate-12 absolute w-8 md:w-10 left-[10vw] lg:left-[25vw] top-[12vh]" src="./i3.png" alt="">
+        <img class="hidden md:block absolute rotate-12 w-8 md:w-10 left-[10vw] lg:left-[25vw] top-2" src="./i1.png" alt="">
+        <img class="hidden md:block absolute w-8 md:w-10 top-[12vh] right-[10vw] lg:right-[25vw]" src="./i4.png" alt="">
+        
+        <h1 class="font-bold text-2xl md:text-3xl lg:text-4xl tracking-tighter mb-6 md:mb-8">[design & build experiences]</h1>
+        <div class="space-y-3 md:space-y-4 text-sm md:text-base">
+            <h3>⚡ Building responsive UIs with modern frameworks like <span class="font-semibold">React & Tailwind</span></h3>
+            <h3>🛠️ Crafting robust backends using <span class="font-semibold">Node.js & Express</span></h3>
+            <h3>💾 Managing scalable databases with <span class="font-semibold">MongoDB & SQL</span></h3>
+        </div>
+    </div>
+
+    <!-- Portfolio Timeline 2020 -->
+    <div class="relative w-full pl-4 pr-4 md:pl-6 md:pr-6">
+        <h1 class="bg-white sticky top-0 z-10 text-2xl md:text-3xl font-bold p-4 md:p-6">2020 The Beginning</h1>
+        <div class="flex flex-col sm:flex-row w-full gap-3 md:gap-5 mb-6">
+            <div class="bg-black w-full sm:w-1/3 h-48 sm:h-64 md:h-80 lg:h-96 mt-4 sm:mt-10 rounded-lg overflow-hidden">
+                <img class="h-full w-full object-cover" 
+                     src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                     alt="Project 1">
+            </div>
+            <div class="bg-black w-full sm:w-1/3 h-48 sm:h-64 md:h-80 lg:h-96 mt-4 sm:mt-16 md:mt-20 lg:mt-25 rounded-lg overflow-hidden">
+                <img class="h-full w-full object-cover" 
+                     src="https://images.unsplash.com/photo-1624996752380-8ec242e0f85d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                     alt="Project 2">
+            </div>
+            <div class="bg-black w-full sm:w-1/3 h-48 sm:h-64 md:h-80 lg:h-96 mt-4 sm:mt-10 rounded-lg overflow-hidden">
+                <img class="h-full w-full object-cover" 
+                     src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=647&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                     alt="Project 3">
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Timeline 2024 -->
+    <div class="relative w-full pl-4 pr-4 md:pl-6 md:pr-6 mb-12">
+        <h1 class="bg-white sticky top-0 z-10 text-2xl md:text-3xl font-bold p-4 md:p-6">2024 The Evolution</h1>
+        <div class="flex flex-col sm:flex-row w-full gap-3 md:gap-5 mb-6">
+            <div class="bg-black w-full sm:w-1/3 h-48 sm:h-64 md:h-80 lg:h-96 mt-4 sm:mt-10 rounded-lg overflow-hidden">
+                <img class="h-full w-full object-cover" 
+                     src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                     alt="Recent Project 1">
+            </div>
+            <div class="bg-black w-full sm:w-1/3 h-48 sm:h-64 md:h-80 lg:h-96 mt-4 sm:mt-16 md:mt-20 lg:mt-25 rounded-lg overflow-hidden">
+                <img class="h-full w-full object-cover" 
+                     src="https://images.unsplash.com/photo-1624996752380-8ec242e0f85d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                     alt="Recent Project 2">
+            </div>
+            <div class="bg-black w-full sm:w-1/3 h-48 sm:h-64 md:h-80 lg:h-96 mt-4 sm:mt-10 rounded-lg overflow-hidden">
+                <img class="h-full w-full object-cover" 
+                     src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=647&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                     alt="Recent Project 3">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-12 md:mt-20 text-black text-center p-6 md:p-8">
+        <h2 class="text-lg md:text-xl font-semibold">🚀 Full Stack Developer</h2>
+        <p class="text-sm md:text-base mt-2 max-w-2xl mx-auto">Building scalable web apps | Crafting frontend with passion | Powering backend with logic</p>
+        <p class="text-xs md:text-sm mt-2 opacity-70">© 2025 Nikhil | All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Clock functionality
+        function updateClock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString('en-US', { 
+                hour: 'numeric', 
+                minute: '2-digit',
+                hour12: true 
+            });
+            document.getElementById('clock').textContent = `[${time}]`;
+        }
+        
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>

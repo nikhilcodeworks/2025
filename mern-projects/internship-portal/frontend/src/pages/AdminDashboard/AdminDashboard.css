@@ -1,0 +1,37 @@
+.bg-sitebg {
+  background-color: #f8f9fa;
+}
+
+.text-primary {
+  color: #03033D;
+}
+
+.bg-primary {
+  background-color: #03033D;
+}
+
+.bg-primary-dark {
+  background-color: #02022E;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+} 
+
+.company-title-style{
+  margin-left: -17%;
+}
+@media (max-width: 320px) {
+  .company-title-style{
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start</title>
+    <link rel="stylesheet" href="./style.css">
+   
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="lockdiv">
+  <div>
+      <div class="text-white flex flex-col justify-center items-center w-screen h-[90vh]">
+        <h1 class='time text-[200px]'>7:14</h1>
+        <h3 class="whole-date text-[30px]">Satuday 5 July</h3>
+    </div>
+    <div class="icon2 flex gap-4   w-[100vw] h-[10vh]">
+        <img class="ml-[90vw] px-1 py-1 hover:bg-zinc-100 hover:rounded-sm flex gap-2 justify-end" src="./assets/icons/wifi.png" alt="">
+        <img class="px-1 py-1 hover:bg-zinc-100 hover:rounded-sm flex gap-2 justify-end" src="./assets/icons/battery.png" alt="">
+        <img class="px-1 py-1 hover:bg-zinc-100 hover:rounded-sm flex gap-2 justify-end" src="./assets/icons/power.png" alt="">
+    </div>
+    
+  </div>
+
+ 
+     <script>
+document.addEventListener('keydown',()=>{
+  window.location.href="lock.html"
+})
+
+
+      function getDate(){
+    let d= new Date();
+
+    let h=d.getHours();
+    let m=d.getMinutes();
+    let day=d.getDate();
+    let month=d.getMonth();
+    let y=d.getFullYear();
+    console.log( h,m,day,month,y);
+let months = [
+  'January', 'February', 'March', 'April', 'May', 'June', 
+  'July', 'August', 'September', 'October', 'November', 'December'
+];
+
+
+month=month?months[month]:"error"
+    
+    h=h<10?"0"+h:h;
+    m=m<10?"0"+m:m;
+
+    let time=document.querySelector('.time');
+    let wholedate=document.querySelector('.whole-date');
+    time.innerText=`${h}:${m}`;
+    wholedate.innerText= `${day} ${month} ${y}`;
+
+
+}
+
+getDate();
+
+setInterval(getDate,60000)
+
+
+     </script>
+
+
+</body>
+</html>

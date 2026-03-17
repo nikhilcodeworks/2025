@@ -1,0 +1,185 @@
+.totaldivcolor{
+    background-color: #03033D;
+}
+/* Container styling */
+.job-form-container {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form layout */
+.job-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Two-column layout */
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+/* Specific styling for Job Title */
+.total-group {
+    /* display: flex; */
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+    padding-bottom: 1%;
+}
+
+.total-group label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.total-group input,
+.total-group select,
+.total-group textarea {
+    padding: 10px;
+    padding-right: 35px;
+    /* Space for icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Icon inside input */
+.total-group .input-icon {
+    position: absolute;
+    right: 10px;
+    top: 43px;
+    font-size: 18px;
+    color: gray;
+}
+
+/* Full width for description */
+.full-width {
+    width: 100%;
+}
+
+.application-deadline-input::placeholder {
+    color: gray;
+    opacity: 1;
+}
+
+
+.full-width textarea {
+    width: 100%;
+    resize: none;
+}
+.duration-select {
+    color: gray;
+}
+
+/* Ensures the placeholder text in select dropdown is gray */
+.duration-select option[value=""] {
+    color: gray;
+}
+
+.responsibility-field input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Input field styling */
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* Space for the remove button */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-wrapper{
+    margin-top: 1%;
+}
+/* Submit button */
+.submit-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design for mobile screens */
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        gap: 0;
+        /* Stack fields in one column */
+    }
+
+    .total-group {
+        width: 100%;
+        padding-bottom: 3%;
+    }
+    .responsibility-field {
+        flex-direction: column;
+    }
+    .remove-btn {
+        font-size: 12px;
+        right: 8px;
+    }
+}
+
+.dialog-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px); /* This applies the blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.dialog-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    width: 500px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 12px;
+    cursor: pointer;
+    color: #eae6e6;
+    
+}
+
+.close-button:hover {
+    color: black;
+}

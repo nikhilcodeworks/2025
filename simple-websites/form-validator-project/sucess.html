@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submission Successful</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Thank you for submitting your details!</h1>
+    <p><strong>Name:</strong> <span id="displayName"></span></p>
+    <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+  </div>
+
+  <script>
+    // Retrieve form data from localStorage
+    const formData = JSON.parse(localStorage.getItem('formdata'));
+    console.log(formData);
+    if (formData) {
+      document.getElementById('displayName').innerText = formData.name;
+      document.getElementById('displayEmail').innerText = formData.email;
+    }
+  </script>
+</body>
+</html>

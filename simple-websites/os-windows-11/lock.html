@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start</title>
+    <link rel="stylesheet" href="./style.css">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<!-- <body class="lockdiv">
+  <div>
+      <div class="text-white flex flex-col justify-center items-center w-screen h-[90vh]">
+        <img class="w-40" src="./assets/icons/user.png" alt="">
+        <h3 class="text-[30px]">Nikhil</h3>
+        <input class="px-1 py-1 border-b-4 focus:border-blue-500 focus:outline-none border-blue-400 bg-black text-white" placeholder="PIN" type="password">
+    </div>
+    <div class="icon2 flex gap-4   w-[100vw] h-[10vh]">
+        <img class="ml-[90vw] px-1 py-1 hover:bg-zinc-100 hover:rounded-sm flex gap-2 justify-end" src="./assets/icons/wifi.png" alt="">
+        <img class="px-1 py-1 hover:bg-zinc-100 hover:rounded-sm flex gap-2 justify-end" src="./assets/icons/battery.png" alt="">
+        <img class="px-1 py-1 hover:bg-zinc-100 hover:rounded-sm flex gap-2 justify-end" src="./assets/icons/power.png" alt="">
+    </div>
+    
+  </div> -->
+
+  <body class="relative w-screen h-screen overflow-hidden">
+
+  <div class="absolute inset-0 bg-cover bg-center blur-sm" style="background-image: url('./assets/win11.jpg');"></div>
+  <div class="relative flex flex-col justify-between h-full">
+  <div class="flex flex-col justify-center items-center w-screen h-[85vh] text-white">
+      <img class="w-40" src="./assets/icons/user.png" alt="">
+      <h3 class="text-[30px]">Nikhil</h3>
+<div class="flex flex-col items-center group">
+  <input 
+    id="input"
+    alt="press enter"
+    class="px-1 py-1 border-b-4 focus:border-blue-500 focus:outline-none border-blue-400 bg-black bg-opacity-50 text-white"
+    placeholder="PIN"
+    type="password">
+  
+  <p id="warning" class="opacity-0 text-white group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity mt-1">
+    Enter 1234 and press enter
+  </p>
+</div>
+
+  <div class="ml-[95%] mt-[50%]  absolute icon2 flex gap-4 w-full h-[10vh] pr-4 items-center justify-end">
+      <img class=" px-1 py-1 hover:bg-zinc-100 hover:rounded-sm" src="./assets/icons/wifi.png" alt="">
+      <img class="px-1 py-1 hover:bg-zinc-100 hover:rounded-sm" src="./assets/icons/battery.png" alt="">
+      <img class="px-1 py-1 hover:bg-zinc-100 hover:rounded-sm" src="./assets/icons/power.png" alt="">
+  </div>
+
+  </div>
+
+  <script>
+    const input =document.getElementById('input');
+    const warn= document.getElementById('warning');
+    input.addEventListener("keydown",(e)=>{
+      if(e.key==="Enter"){
+        if(input.value==="1234"){
+          window.location.href='main.html';
+        }else{
+
+          warn.innerText=" wrong passwrod please re-enter pin 1234"
+          
+        }
+
+      }
+    })
+    
+  </script>
+
+</body>
+</body>
+</html>
